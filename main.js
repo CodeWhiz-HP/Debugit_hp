@@ -46,11 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function fetchGovernmentResource(query) {
         try {
-            const apiKey = API_KEY;  // From config.js
-            const searchEngineId = SEARCH_ENGINE_ID;  // From config.js
-            const url = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(query)}+site:gov.in&cx=${searchEngineId}&key=${apiKey}`;
-
-            const response = await fetch(url);
+            const response = await fetch(`https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(query)}+site:gov.in&cx=${SEARCH_ENGINE_ID}&key=${API_KEY}`);
             const data = await response.json();
 
             if (data.items && data.items.length > 0) {
@@ -79,11 +75,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function displayNoResults(query) {
+        const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}+site:gov.in`;
         const resultContainer = document.createElement("section");
         resultContainer.innerHTML = `
             <h2>No Local Results Found</h2>
             <p>Click below to search on Google:</p>
-            <p><a href="https://www.google.com/search?q=${encodeURIComponent(query)}+site:gov.in" target="_blank">Search on Google</a></p>
+            <p><a href="${googleSearchUrl}" target="_blank">Search on Google</a></p>
         `;
         document.querySelector("main").appendChild(resultContainer);
     }
