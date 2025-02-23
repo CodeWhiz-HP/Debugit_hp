@@ -1,0 +1,44 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#searchBar {
+    margin-top: 10px;
+    padding: 10px;
+    width: 80%;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.resource-item {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.resource-item:hover {
+    background-color: #e9ecef;
+}
+a {
+    padding-left:10px;
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Makes the text color same as surrounding text */
+    cursor: default; /* Removes the pointer cursor */
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Resource</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the shared CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Submit a New Resource</h1>
+        <nav>
+            <a href="struct.html">Home</a> <!-- Link back to the main page -->
+        </nav>
+    </header>
+
+    <main>
+        <section id="submission-form">
+            <h2>Submit a New Resource</h2>
+            <form id="resourceForm">
+                <label for="resourceName">Resource Name:</label>
+                <input type="text" id="resourceName" placeholder="Enter resource name" required>
+
+                <label for="category">Category:</label>
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Emergency Services">Emergency Services</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Government Offices">Government Offices</option>
+                    <option value="Education">Education</option>
+                </select>
+
+                <label for="address">Address:</label>
+                <textarea id="address" placeholder="Enter address" required></textarea>
+
+                <label for="contact">Contact Information:</label>
+                <input type="text" id="contact" placeholder="Enter phone or email" required>
+
+                <label for="description">Description:</label>
+                <textarea id="description" placeholder="Provide a brief description"></textarea>
+
+                <button type="submit">Submit Resource</button>
+            </form>
+
+            <!-- Confirmation Message -->
+            <div id="confirmationMessage" style="display: none; color: green; margin-top: 10px;">
+                Thank you! Your resource has been submitted.
+            </div>
+        </section>
+    </main>
+
+    <!-- Link to the shared JavaScript file -->
+    <script src="main.js"></script>
+</body>
+</html>
